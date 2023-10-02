@@ -22,7 +22,7 @@
       docker_hello_deriv =
         pkgs.dockerTools.buildLayeredImage {
           name = "docker-nix-hello";
-          tag = "v1";
+          tag = "v2";
           contents = self.packages.${system}.hello;
 
           config = {
