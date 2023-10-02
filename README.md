@@ -47,4 +47,5 @@ verify it's arrived by inspecting the gihub 'packages' tab [https://github.com/R
 
 image (github package) is initially private;  make it public from the package's 'setting' link
 
+Related github project [https://github.com/Rconybea/docker-action-example2] will try to invoke this container
 

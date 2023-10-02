@@ -24,6 +24,7 @@
           name = "docker-nix-hello";
           tag = "v1";
           contents = [ self.packages.${system}.hello
+                       self.packages.${system}.bash
                        # for /bin/tail,  assumed by github actions when invoking a docker contianer
                        self.packages.${system}.coreutils ];
 
@@ -43,6 +44,7 @@
         # for example,  github actions creates container with --entrypoint "tail",
         # so container must provide executable with that name in $PATH
         #
+        bash = pkgs.bash;
         coreutils = pkgs.coreutils;
       };
     };
