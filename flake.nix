@@ -37,6 +37,11 @@
 
         hello = hello_deriv;
         docker_hello = docker_hello_deriv;
+
+        # for example,  github actions creates container with --entrypoint "tail",
+        # so container must provide executable with that name in $PATH
+        #
+        coreutils = pkgs.coreutils;
       };
     };
 }
