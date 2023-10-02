@@ -38,13 +38,13 @@
       packages.${system} = {
         default = docker_hello_deriv;
 
-        hello = hello_deriv;
         docker_hello = docker_hello_deriv;
+        hello = hello_deriv;
 
+        bash = pkgs.bash;
         # for example,  github actions creates container with --entrypoint "tail",
         # so container must provide executable with that name in $PATH
         #
-        bash = pkgs.bash;
         coreutils = pkgs.coreutils;
       };
     };
