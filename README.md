@@ -1,3 +1,6 @@
+1. Package helloworld as a docker image
+2. use resulting docker container to run a github workflow
+
 ```
 $ cd ~/proj/docker-nix-hello  # directory containing this file
 $ nix build
@@ -47,5 +50,5 @@ verify it's arrived by inspecting the gihub 'packages' tab [https://github.com/R
 
 image (github package) is initially private;  make it public from the package's 'setting' link
 
-Related github project [https://github.com/Rconybea/docker-action-example2] will try to invoke this container
+Related github project [https://github.com/Rconybea/docker-action-example2] will try to invoke this container.
 
