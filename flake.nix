@@ -22,8 +22,10 @@
       docker_hello_deriv =
         pkgs.dockerTools.buildLayeredImage {
           name = "docker-nix-hello";
-          tag = "v2";
-          contents = self.packages.${system}.hello;
+          tag = "v1";
+          contents = [ self.packages.${system}.hello
+                       # for /bin/tail,  assumed by github actions when invoking a docker contianer
+                       self.packages.${system}.coreutils ];
 
           config = {
             Cmd = [ "/bin/entrypoint.sh" ];
